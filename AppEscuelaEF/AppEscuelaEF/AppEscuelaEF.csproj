@@ -56,12 +56,36 @@
   <ItemGroup>
     <Compile Include="Context\EscuelaDbContext.cs" />
     <Compile Include="Inicio.cs" />
+    <Compile Include="Migrations\202004280202039_AppEscuela-27-04-2020.cs" />
+    <Compile Include="Migrations\202004280202039_AppEscuela-27-04-2020.designer.cs">
+      <DependentUpon>202004280202039_AppEscuela-27-04-2020.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="ModelConfiguration\CursoConfiguration.cs" />
+    <Compile Include="ModelConfiguration\EstudianteConfiguration.cs" />
+    <Compile Include="ModelConfiguration\EstudianteCursoConfiguration.cs" />
+    <Compile Include="ModelConfiguration\EstudianteDireccionConfiguration.cs" />
+    <Compile Include="ModelConfiguration\GradoConfiguration.cs" />
+    <Compile Include="Model\Curso.cs" />
+    <Compile Include="Model\Estudiante.cs" />
+    <Compile Include="Model\EstudianteDireccion.cs" />
+    <Compile Include="Model\EstudianteCurso.cs" />
+    <Compile Include="Model\Grado.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servicios\CursoRepositorio.cs" />
+    <Compile Include="Servicios\EstudianteCursoRepositorio.cs" />
+    <Compile Include="Servicios\EstudianteDireccionRepositorio.cs" />
+    <Compile Include="Servicios\EstudianteRepositorio.cs" />
+    <Compile Include="Servicios\GradoRepositorio.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202004280202039_AppEscuela-27-04-2020.resx">
+      <DependentUpon>202004280202039_AppEscuela-27-04-2020.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
